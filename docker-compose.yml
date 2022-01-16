@@ -1,0 +1,48 @@
+version: "3"
+
+services:
+  node:
+    # コンテナ名
+    container_name: next_v2
+    # build
+    image: node:17-alpine3.12
+    # コンテナの中に入る
+    tty: true
+    # 他のコンテナ起動後に起動するように制御
+    depends_on:
+      - db
+    # ボリューム
+    volumes:
+      - .:/workspace:cached
+      - /workspace/node_modules
+    # 環境変数
+    environment:
+      TZ: "Asia/Tokyo"
+
+  # DBサーバ
+  db:
+    # コンテナ名
+    container_name: mysql_v2
+    # build
+    image: mysql
+    # 環境設定
+    environment:
+      TZ: Asia/Tokyo
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: sample1
+      MYSQL_USER: app
+      MYSQL_PASSWORD: password
+    # コンテナの中に入る
+    tty: true
+    # ボリューム
+    volumes:
+      - mysql_data:/var/lib/mysql
+    # ポート開放
+    ports:
+      - 3306:3306
+
+# 名前付きボリュームをdockerホストの管理下で作成
+volumes:
+  #
+  mysql_data: {}

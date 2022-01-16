@@ -1,0 +1,41 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "apollographql",
+    "autoincrement",
+    "chakra",
+    "codegen",
+    "datasource",
+    "dbaeumer",
+    "dbgenerated",
+    "destyle",
+    "devcontainer",
+    "eringiv",
+    "esbenp",
+    "hoge",
+    "jsxdev",
+    "kohler",
+    "nestjs",
+    "Nikolas",
+    "respawn",
+    "sakura",
+    "signup",
+    "stylelint",
+    "TANNERLINSLEY",
+    "todos",
+    "unstyled",
+    "upsert",
+    "visualstudioexptteam",
+    "vite",
+    "vitejs",
+    "vscodeintellicode"
+  ],
+  "ignoreWords": [],
+  "import": [],
+  "enableFiletypes": [
+    "prisma"
+  ]
+}

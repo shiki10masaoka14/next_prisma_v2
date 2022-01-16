@@ -1,0 +1,14 @@
+{
+  "name": "next_prisma_v2",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "node",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "extensions": [
+    "prisma.prisma",
+    "streetsidesoftware.code-spell-checker",
+    "dbaeumer.vscode-eslint",
+    "oderwat.indent-rainbow",
+    "esbenp.prettier-vscode",
+    "visualstudioexptteam.vscodeintellicode"  ]
+}
