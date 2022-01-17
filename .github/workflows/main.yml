@@ -23,15 +23,21 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
-      - name: build
+          
+      - name: install
+        shell: bash
+        run: yarn install
+      - name: prisma
         shell: bash
         run: |
-          yarn install
           yarn prisma db push
           yarn prisma generate
-          yarn next build
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      - name: build
+        shell: bash
+        run: yarn next build
+        
       - uses: amondnet/vercel-action@v20
         with:
           # GitHub Actions の Secrets で作成した値を参照する形で
