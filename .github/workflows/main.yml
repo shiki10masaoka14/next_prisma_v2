@@ -27,6 +27,7 @@ jobs:
         shell: bash
         run: |
           yarn install
+          yarn prisma db push
           yarn prisma generate
           yarn next build
         env:
