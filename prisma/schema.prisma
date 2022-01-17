@@ -12,5 +12,4 @@ model Todo {
   id         String  @id @default(dbgenerated()) @map("_id") @db.ObjectId
   todo       String
   isComplete Boolean @default(false)
-  disc       String?
 }
