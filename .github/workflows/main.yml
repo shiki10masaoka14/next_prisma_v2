@@ -30,7 +30,6 @@ jobs:
       - name: prisma
         shell: bash
         run: |
-          yarn prisma init
           yarn prisma db push
           yarn prisma generate
         env:
