@@ -2,6 +2,12 @@ name: deploy website
 on:
   push:
     branches: [master]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: branch|tag|SHA to checkout
+        default: 'main'
+        required: true
 jobs:
   deploy:
     runs-on: ubuntu-latest
